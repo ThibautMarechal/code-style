@@ -32,4 +32,4 @@ jobs:
       - run: npm set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
       - run: git config --global user.email "github@thibautmarechal.be"
       - run: git config --global user.name "Thibaut Maréchal"
-      - run: yarn lerna publish ${{ github.event.inputs.release_type }} --yes
+      - run: yarn lerna publish ${{ github.event.inputs.release_type }} --no-verify-access --yes
