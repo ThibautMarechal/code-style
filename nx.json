@@ -1,0 +1,32 @@
+{
+  "extends": "@nrwl/workspace/presets/core.json",
+  "npmScope": "@thimar",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/js"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "YzlhYjg3YjgtZmMzZC00ODUwLWJmMDEtM2YwYTA2YzJmNzE0fHJlYWQtd3JpdGU="
+      }
+    }
+  }
+}

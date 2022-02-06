@@ -1,0 +1,15 @@
+{
+  "name": "@thimar/code-style",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@nrwl/cli": "13.7.3",
+    "@nrwl/nx-cloud": "latest",
+    "@nrwl/tao": "13.7.3",
+    "@nrwl/workspace": "13.7.3"
+  },
+  "workspaces": [
+    "packages/**"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@thimar/prettier-config",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Thibaut Maréchal's prettier config",
+  "author": {
+    "name": "Thibaut Maréchal",
+    "email": "github@thibautmarechal.be",
+    "url": "https://thibautmarechal.be"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ThibautMarechal/code-style.git",
+    "directory": "packages/prettier-config"
+  },
+  "main": ".prettierrc.js",
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  },
+  "scripts": {
+    "lint": "prettier . --write",
+    "test": "prettier . --check"
+  }
+}

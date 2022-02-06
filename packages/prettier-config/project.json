@@ -1,0 +1,20 @@
+{
+  "root": "packages/prettier-config",
+  "sourceRoot": "packages/prettier-config",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "yarn run lint",
+        "cwd": "packages/prettier-config"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "yarn run test",
+        "cwd": "packages/prettier-config"
+      }
+    }
+  }
+}

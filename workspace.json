@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "eslint-config": "packages/eslint-config",
+    "prettier-config": "packages/prettier-config"
+  }
+}

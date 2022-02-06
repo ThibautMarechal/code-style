@@ -1,0 +1,20 @@
+{
+  "root": "packages/eslint-config",
+  "sourceRoot": "packages/eslint-config",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "yarn run lint",
+        "cwd": "packages/eslint-config"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "yarn run test",
+        "cwd": "packages/eslint-config"
+      }
+    }
+  }
+}
