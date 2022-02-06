@@ -13,6 +13,9 @@
     "url": "git://github.com/ThibautMarechal/code-style.git",
     "directory": "packages/prettier-config"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": ".prettierrc.js",
   "devDependencies": {
     "prettier": "2.5.1"

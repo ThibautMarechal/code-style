@@ -13,6 +13,9 @@
     "url": "git://github.com/ThibautMarechal/code-style.git",
     "directory": "packages/eslint-config"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": ".eslintrc",
   "dependencies": {
     "@thimar/prettier-config": "^1.1.1",
