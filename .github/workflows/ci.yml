@@ -5,6 +5,13 @@ on:
       - main
   pull_request:
   workflow_dispatch:
+    inputs:
+      only_affected:
+        description: "Run only affected packages"
+        default: 'true'
+        required: false
+        type: boolean
+
 
 env:
   NX_CLOUD_DISTRIBUTED_EXECUTION: true
@@ -23,9 +30,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '16'
+          cache: 'yarn'
       - run: yarn install
       - run: npx nx-cloud start-ci-run
-      - run: npx nx affected --target=test --parallel --max-parallel=2
+      - if: ${{ github.event.inputs.only_affected == 'true' }}
+        run: npx nx affected --target=test --parallel
+      - if: ${{ github.event.inputs.only_affected == 'false' }}
+        run: npx nx run-many --target=test --all --parallel
       - run: npx nx-cloud stop-all-agents
   pr:
     runs-on: ubuntu-latest
@@ -40,13 +51,17 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '16'
+          cache: 'yarn'
       - run: yarn install
       - run: npx nx-cloud start-ci-run
-      - run: npx nx affected --target=test --parallel --max-parallel=2
+      - if: ${{ github.event.inputs.only_affected == 'true' }}
+        run: npx nx affected --target=test --parallel
+      - if: ${{ github.event.inputs.only_affected == 'false' }}
+        run: npx nx run-many --target=test --all --parallel
       - run: npx nx-cloud stop-all-agents
   agents:
     runs-on: ubuntu-latest
-    name: NX Agent
+    name: Nx Agent
     timeout-minutes: 60
     strategy:
       matrix:
@@ -56,6 +71,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '16'
+          cache: 'yarn'
       - run: yarn install
       - name: Start Nx Agent ${{ matrix.agent }}
         run: npx nx-cloud start-agent
