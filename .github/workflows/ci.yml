@@ -33,7 +33,7 @@ jobs:
           cache: 'yarn'
       - run: yarn install
       - run: npx nx-cloud start-ci-run
-      - if: ${{ github.event.inputs.only_affected == 'true' }}
+      - if: ${{ !github.event.inputs.only_affected || github.event.inputs.only_affected == 'true' }}
         run: npx nx affected --target=test --parallel
       - if: ${{ github.event.inputs.only_affected == 'false' }}
         run: npx nx run-many --target=test --all --parallel
