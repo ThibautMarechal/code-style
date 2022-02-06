@@ -1,6 +1,6 @@
 {
   "name": "@thimar/eslint-config",
-  "version": "1.1.2-alpha.0",
+  "version": "1.2.0",
   "license": "MIT",
   "description": "Thibaut Maréchal's eslint config",
   "author": {
@@ -18,7 +18,7 @@
   },
   "main": ".eslintrc",
   "dependencies": {
-    "@thimar/prettier-config": "^1.1.2-alpha.0",
+    "@thimar/prettier-config": "^1.2.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.3",
