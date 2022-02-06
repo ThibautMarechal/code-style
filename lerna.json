@@ -6,6 +6,7 @@
       "message": "chore(release): publish"
     }
   },
+  "useWorkspaces": true,
   "packages": [
     "packages/*"
   ]
