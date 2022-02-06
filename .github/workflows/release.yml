@@ -29,4 +29,7 @@ jobs:
           node-version: '16'
           cache: 'yarn'
       - run: yarn install
+      - run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: yarn lerna publish ${{ github.event.inputs.release_type }}
