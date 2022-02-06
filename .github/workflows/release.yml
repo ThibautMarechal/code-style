@@ -1,0 +1,32 @@
+name: CI
+on:
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: "Type of release"
+        default: 'patch'
+        required: false
+        type: choice
+        options:
+          - "major"
+          - "minor"
+          - "patch"
+          - "premajor"
+          - "preminor"
+          - "prepatch"
+          - "prerelease"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout [main]
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - run: yarn install
+      - run: yarn lerna publish {{ github.event.inputs.release_type }}
