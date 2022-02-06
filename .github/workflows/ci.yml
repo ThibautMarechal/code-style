@@ -46,7 +46,7 @@ jobs:
       - run: npx nx-cloud stop-all-agents
   agents:
     runs-on: ubuntu-latest
-    name: Agent 1
+    name: NX Agent
     timeout-minutes: 60
     strategy:
       matrix:
