@@ -29,10 +29,7 @@ jobs:
           node-version: '16'
           cache: 'yarn'
       - run: yarn install
-      - run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: more .npmrc
+      - run: npm set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
       - run: git config --global user.email "github@thibautmarechal.be"
       - run: git config --global user.name "Thibaut Maréchal"
       - run: yarn lerna publish ${{ github.event.inputs.release_type }} --yes
