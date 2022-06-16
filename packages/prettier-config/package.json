@@ -18,7 +18,7 @@
   },
   "main": ".prettierrc.js",
   "devDependencies": {
-    "prettier": "2.7.0"
+    "prettier": "2.7.1"
   },
   "scripts": {
     "lint": "prettier . --write",
