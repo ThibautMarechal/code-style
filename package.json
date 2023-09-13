@@ -3,10 +3,10 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@nrwl/cli": "15.8.7",
+    "@nrwl/cli": "15.9.3",
     "@nrwl/nx-cloud": "latest",
-    "@nrwl/tao": "15.8.7",
-    "@nrwl/workspace": "15.8.7",
+    "@nrwl/tao": "15.9.7",
+    "@nrwl/workspace": "15.9.7",
     "lerna": "6.5.1",
     "typescript": "5.0.2"
   },
