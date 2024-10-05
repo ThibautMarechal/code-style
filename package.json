@@ -5,8 +5,8 @@
   "devDependencies": {
     "@nrwl/cli": "15.8.7",
     "@nrwl/nx-cloud": "latest",
-    "@nrwl/tao": "15.8.7",
-    "@nrwl/workspace": "15.8.7",
+    "@nrwl/tao": "19.8.4",
+    "@nrwl/workspace": "19.8.4",
     "lerna": "6.5.1",
     "typescript": "5.0.2"
   },
