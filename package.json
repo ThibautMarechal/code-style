@@ -7,7 +7,7 @@
     "@nrwl/nx-cloud": "latest",
     "@nrwl/tao": "15.8.7",
     "@nrwl/workspace": "15.8.7",
-    "lerna": "6.5.1",
+    "lerna": "6.6.2",
     "typescript": "5.0.2"
   },
   "workspaces": [
